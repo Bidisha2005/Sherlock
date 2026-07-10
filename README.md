@@ -26,7 +26,13 @@ flowchart LR
 - `shared`: Cross-service TypeScript contracts for participant events, evidence, predictions, and metrics.
 - `scripts`: Mock meeting generator and local orchestration helpers.
 
+## Assumptions
 
+- The system receives participant metadata (display name, join/leave events, webcam status, speaking activity, transcript, etc.) through platform adapters or approved meeting APIs.
+- Each participant has a unique identifier throughout the meeting.
+- Speech diarization and transcripts are attributed to the correct participant.
+- External metadata such as candidate name, email, and interview schedule is available before the interview begins.
+- The current prototype uses simulated real-time meeting events for demonstration purposes and can be extended to integrate with production meeting SDKs.
 > **🚀 Real-Time Demo**
 >
 > **After cloning the repository, navigate to the `shrelock-ai` directory and run the application using `npm run dev`. The project is fully integrated with a real-time data stream powered by Socket.IO, allowing the dashboard to receive and display live participant updates, confidence scores, transcripts, rankings, and evidence without requiring a page refresh.**
@@ -67,7 +73,32 @@ npm run dev
 The frontend runs on `http://localhost:5173`, the API on `http://localhost:4000`, and the AI service on `http://localhost:5001`.
 
 For the current local real-time demo, the Node server starts a synthetic meeting adapter that emits Socket.IO updates every three seconds. The dashboard connects to `http://127.0.0.1:4000`, receives `dashboard.updated`, and updates participant cards, transcript, timeline, logs, ranking, and confidence without refreshing.
+## Evaluation
 
+### Testing Approach
+
+The system was evaluated using simulated real-time interview sessions containing multiple participants with varying metadata, speaking patterns, and behavioral signals.
+
+### Edge Cases Covered
+
+- Candidate joins using a device name (e.g., "MacBook Pro")
+- Candidate changes display name during interview
+- Multiple interviewers join simultaneously
+- Silent observers present in meeting
+- Missing transcript information
+- Webcam disabled
+- Multiple participants with similar names
+- Incomplete candidate metadata
+
+### Accuracy
+
+The confidence engine combines multiple weighted signals instead of relying on any single heuristic, making predictions more robust under uncertainty.
+
+### Limitations
+
+- Uses simulated meeting adapters instead of production Google Meet/Zoom/Teams APIs.
+- Computer vision and speech models are lightweight prototype implementations.
+- Confidence weights are rule-based and can be learned from historical interview data in production.
 ## Core Prediction Contract
 
 Each extractor emits:
