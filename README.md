@@ -35,6 +35,16 @@ flowchart LR
 ![Evidence Panel](./Screenshot%202026-07-10%20223518.png)
 ![Architecture](./Screenshot%202026-07-10%20223538.png)
 
+> **🚀 Real-Time Demo**
+>
+> **After cloning the repository, navigate to the `shrelock-ai` directory and run the application using `npm run dev`. The project is fully integrated with a real-time data stream powered by Socket.IO, allowing the dashboard to receive and display live participant updates, confidence scores, transcripts, rankings, and evidence without requiring a page refresh.**
+>
+> **Frontend Dashboard:** `http://127.0.0.1:5173/`
+>
+> **Backend Health Check:** `http://127.0.0.1:4000/health`
+>
+> **Once the backend is running, you can verify that the API is operational by visiting the Health Check endpoint. The frontend automatically establishes a real-time connection with the backend and continuously updates the dashboard as new events are streamed.**
+
 ## Local Setup
 
 1. Install Node.js 20+ and Python 3.10+.
