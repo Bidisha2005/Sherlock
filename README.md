@@ -26,14 +26,6 @@ flowchart LR
 - `shared`: Cross-service TypeScript contracts for participant events, evidence, predictions, and metrics.
 - `scripts`: Mock meeting generator and local orchestration helpers.
 
-  
-![Live Dashboard](./Screenshot%202026-07-10%20223221.png)
-![Live Transcript](./Screenshot%202026-07-10%20223321.png)
-![Confidence Timeline](./Screenshot%202026-07-10%20223344.png)
-![Ranks](./Screenshot%202026-07-10%20223405.png)
-![Participants](./Screenshot%202026-07-10%20223452.png)
-![Evidence Panel](./Screenshot%202026-07-10%20223518.png)
-![Architecture](./Screenshot%202026-07-10%20223538.png)
 
 > **🚀 Real-Time Demo**
 >
@@ -44,6 +36,15 @@ flowchart LR
 > **Backend Health Check:** `http://127.0.0.1:4000/health`
 >
 > **Once the backend is running, you can verify that the API is operational by visiting the Health Check endpoint. The frontend automatically establishes a real-time connection with the backend and continuously updates the dashboard as new events are streamed.**
+
+![Live Dashboard](./Screenshot%202026-07-10%20223221.png)
+![Live Transcript](./Screenshot%202026-07-10%20223321.png)
+![Confidence Timeline](./Screenshot%202026-07-10%20223344.png)
+![Ranks](./Screenshot%202026-07-10%20223405.png)
+![Participants](./Screenshot%202026-07-10%20223452.png)
+![Evidence Panel](./Screenshot%202026-07-10%20223518.png)
+![Architecture](./Screenshot%202026-07-10%20223538.png)
+
 
 ## Local Setup
 
