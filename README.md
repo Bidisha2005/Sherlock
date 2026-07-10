@@ -27,14 +27,13 @@ flowchart LR
 - `scripts`: Mock meeting generator and local orchestration helpers.
 
   
-![Live Dashboard](./Screenshot 2026-07-10 223221.png)
-![Live Transcript](Screenshot 2026-07-10 223321.png)
-![Confidence Timeline](Screenshot 2026-07-10 223344.png)
-![Ranks](Screenshot 2026-07-10 223405.png)
-![Participants](Screenshot 2026-07-10 223452.png)
-![Evidence Panel](Screenshot 2026-07-10 223518.png)
-![Architechture](Screenshot 2026-07-10 223538.png)
-
+![Live Dashboard](./Screenshot%202026-07-10%20223221.png)
+![Live Transcript](./Screenshot%202026-07-10%20223321.png)
+![Confidence Timeline](./Screenshot%202026-07-10%20223344.png)
+![Ranks](./Screenshot%202026-07-10%20223405.png)
+![Participants](./Screenshot%202026-07-10%20223452.png)
+![Evidence Panel](./Screenshot%202026-07-10%20223518.png)
+![Architecture](./Screenshot%202026-07-10%20223538.png)
 
 ## Local Setup
 
