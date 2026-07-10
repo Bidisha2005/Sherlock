@@ -1,0 +1,23 @@
+{
+  "name": "sherlock-ai-local",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local multi-signal AI system for candidate identification in live meetings.",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "test": "node scripts/test.mjs",
+    "generate:mock": "node scripts/mock-meeting-generator.mjs",
+    "server:dev": "cd server && npm run dev",
+    "client:dev": "cd client && npm run dev",
+    "ai:dev": "cd ai-service && python -m flask --app app.main run --port 5001"
+  },
+  "workspaces": [
+    "client",
+    "server",
+    "shared"
+  ],
+  "engines": {
+    "node": ">=20.0.0",
+    "python": ">=3.10"
+  }
+}

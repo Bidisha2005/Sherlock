@@ -1,0 +1,19 @@
+# config.yaml
+job_portals:
+  linkedin: true
+  indeed: true
+  monster: true
+  dice: true
+  glassdoor: true
+
+target_jd_count: 60
+output_excel: "QA_Rubric.xlsx"
+jd_text_file: "QA_JDs_Extraction.txt"
+
+skills_base:
+  manual_testing: ["test cases", "test plans", "regression", "smoke test"]
+  automation_testing: ["selenium", "cypress", "playwright", "testng"]
+  # ... more skills
+
+api_keys:
+  openai: ""  # Set your API key here or use environment variable

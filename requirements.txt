@@ -1,0 +1,10 @@
+# requirements.txt
+pandas
+openpyxl
+xlrd
+requests
+beautifulsoup4
+selenium
+webdriver-manager
+openai  # if using ChatGPT API
+googlesearch-python
